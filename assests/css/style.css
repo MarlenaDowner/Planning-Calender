@@ -13,9 +13,19 @@ textarea {
   padding: 10px;
 }
 
-i {
-  color: black;
 
+/*Come back and change icon colour when button is applied*/
+i {
+  color: white!important;
+  
+}
+
+i:hover {
+  transition: all 0.3s linear!important;
+}
+
+button {
+  background: #096c9b!important;
 }
 
 .jumbotron {
