@@ -13,19 +13,6 @@ textarea {
   padding: 10px;
 }
 
-/*Come back and change icon colour when button is applied*/
-i {
-  color: white;
-  
-}
-
-i:hover {
-  transition: all 0.3s linear!important;
-}
-
-button {
-  background: #096c9b!important;
-}
 
 .jumbotron {
   text-align: center;
@@ -71,15 +58,21 @@ button {
   color: white;
 }
 
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+
+/*----------------Button Icon----------------*/
+i {
   color: white;
 }
 
-.saveBtn i:hover {
+i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+  transition: all 0.3s linear!important;
+}
+
+button {
+  background: #096c9b!important;
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
