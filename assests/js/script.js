@@ -15,3 +15,54 @@ function lead() {
   }
   
   setInterval(lead, 1);
+
+
+//Save the event in local storage when the save button is clicked in that timeblock.
+
+//action button so when clickec ALL save-btn are proceed
+//NOTE to self: To make the saveBtn work rather then adding an ID to the HTML added the saveBTn within the button class.
+
+$(document).ready(function(){
+
+    $(".saveBtn").on("click", function(){
+        alert("Its working");
+    })
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var saveButtonE1 = $("#save-btn");
+// console.log(saveButtonE1);
+
+
+
+// var saveButtonE1 = document.getElementById("save-btn");
+// console.log(saveButtonE1);
+
+// saveButtonE1.on('click', function () {
+//     alert("hi");
+// })
+
+
+// var saveButtonE1 = document.querySelector("#save-btn");
+// console.log(saveButtonE1);
+
+
+// function saveButtonE1() {
+//     alert("hi");
+//     console.log(saveButtonE1);
+// }
