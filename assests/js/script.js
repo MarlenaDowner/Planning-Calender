@@ -25,13 +25,41 @@ function lead() {
 $(document).ready(function(){
 
     $(".saveBtn").on("click", function(){
-        alert("Its working");
+        // console.log("Its working");
+
+        let blockTime = $(this).parent().attr("id")
+        let value = $(this).siblings(".description").val();
+
+        console.log(blockTime);
+        console.log(value);
+
+        localStorage.setItem(blockTime, value);
+
+        $(".notification").addClass("show")
+
+        setTimeout(function(){
+            $(".notofication").removeClass("show");   
+        },  5000)
+
+
+
+
+
     })
 
 })
 
+//Add to local storage when the save button is clicked in that timeblock.
 
-
+$("#hour-9 .description").val(localStorage.getItem("hour-9"))
+$("#hour-10 .description").val(localStorage.getItem("hour-9"))
+$("#hour-11 .description").val(localStorage.getItem("hour-9"))
+$("#hour-12 .description").val(localStorage.getItem("hour-9"))
+$("#hour-13 .description").val(localStorage.getItem("hour-9"))
+$("#hour-14 .description").val(localStorage.getItem("hour-9"))
+$("#hour-15 .description").val(localStorage.getItem("hour-9"))
+$("#hour-16 .description").val(localStorage.getItem("hour-9"))
+$("#hour-17 .description").val(localStorage.getItem("hour-9"))
 
 
 
