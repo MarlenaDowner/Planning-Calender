@@ -53,14 +53,19 @@ function hourUpdate() {
 
    for(let i = 0; i < $(".time-block").length; i++){
     let hourBlock= parseInt($(".time-block")[i].getAttribute("id").split("-")[1])
+
+    if(hourBlock < currentHour) {
+        $(".time-block")[i].classList.add("past")
+    } else if (hourBlock === currentHour){
+        $(".time-block")[i].classList.add("past")
+        $(".time-block")[i].classList.remove("present")
+    }   else {
+        $(".time-block")[i].classList.remove("past")
+        $(".time-block")[i].classList.remove("present")
+        $(".time-block")[i].classList.add("future")
+    }
    }
-
-
-
-   
-
 }
-
 
 hourUpdate();
 
