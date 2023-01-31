@@ -34,32 +34,53 @@ $(document).ready(function(){
         console.log(value);
 
         localStorage.setItem(blockTime, value);
+        
+        // $(".notification").addClass("showText")
 
-        $(".notification").addClass("show")
-
-        setTimeout(function(){
-            $(".notofication").removeClass("show");   
-        },  5000)
-
-
-
-
-
+        // setTimeout(function(){
+        //     $(".notofication").removeClass("showText");   
+        // },  5000)
     })
 
 })
 
+// Color-code each timeblock based on past, present, and future when the timeblock is viewed.
+
+
+function hourUpdate() {
+    let currentHour = moment().hours();
+    // console.log(currentHour);
+
+    
+
+
+}
+
+
+hourUpdate();
+
+
+
+
+
+
+
+
+
+
+
+
 //Add to local storage when the save button is clicked in that timeblock.
 
-$("#hour-9 .description").val(localStorage.getItem("hour-9"))
-$("#hour-10 .description").val(localStorage.getItem("hour-9"))
-$("#hour-11 .description").val(localStorage.getItem("hour-9"))
-$("#hour-12 .description").val(localStorage.getItem("hour-9"))
-$("#hour-13 .description").val(localStorage.getItem("hour-9"))
-$("#hour-14 .description").val(localStorage.getItem("hour-9"))
-$("#hour-15 .description").val(localStorage.getItem("hour-9"))
-$("#hour-16 .description").val(localStorage.getItem("hour-9"))
-$("#hour-17 .description").val(localStorage.getItem("hour-9"))
+// $("#hour-9 .description").val(localStorage.getItem("hour-9"))
+// $("#hour-10 .description").val(localStorage.getItem("hour-9"))
+// $("#hour-11 .description").val(localStorage.getItem("hour-9"))
+// $("#hour-12 .description").val(localStorage.getItem("hour-9"))
+// $("#hour-13 .description").val(localStorage.getItem("hour-9"))
+// $("#hour-14 .description").val(localStorage.getItem("hour-9"))
+// $("#hour-15 .description").val(localStorage.getItem("hour-9"))
+// $("#hour-16 .description").val(localStorage.getItem("hour-9"))
+// $("#hour-17 .description").val(localStorage.getItem("hour-9"))
 
 
 
