@@ -51,8 +51,13 @@ function hourUpdate() {
     let currentHour = moment().hours();
     // console.log(currentHour);
 
-    
+   for(let i = 0; i < $(".time-block").length; i++){
+    let hourBlock= parseInt($(".time-block")[i].getAttribute("id").split("-")[1])
+   }
 
+
+
+   
 
 }
 
