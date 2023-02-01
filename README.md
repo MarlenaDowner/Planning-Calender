@@ -25,6 +25,10 @@ My motivation for this project was to build a simple calendar application that a
 
 ## Links
 
+https://marlenadowner.github.io/Planning-Calender/
+
+https://github.com/MarlenaDowner/Planning-Calender 
+
 
 ## License
 
