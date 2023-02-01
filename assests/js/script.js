@@ -10,11 +10,12 @@ let rows = document.getElementById("time");
 //NOTE: In the UK we display the date as Monday 13th December (dddd Do MMMM),for this assessment I have kept to this format rather then the US format
 
 function lead() {
-    var rightNow = moment().format('dddd Do MMMM [at] hh:mm:ss a');
+    var rightNow = moment().format('dddd Do MMMM [at] hh:mm:ss a'); //removed setInterval(lead, 1); as the one below wouldnt work with both in the code but added it back is getting error message from line 70.
     currentDayE1.text(rightNow);
   }
   
-  setInterval(lead, 1);
+setInterval(lead, 1);
+
 
 
 //Save the event in local storage when the save button is clicked in that timeblock.
@@ -25,7 +26,7 @@ function lead() {
 $(document).ready(function(){
 
     $(".saveBtn").on("click", function(){
-        // console.log("Its working");
+        // console.log("");
 
         let blockTime = $(this).parent().attr("id")
         let value = $(this).siblings(".description").val();
@@ -35,11 +36,6 @@ $(document).ready(function(){
 
         localStorage.setItem(blockTime, value);
         
-        // $(".notification").addClass("showText")
-
-        // setTimeout(function(){
-        //     $(".notofication").removeClass("showText");   
-        // },  5000)
     })
 
 })
@@ -64,64 +60,29 @@ function hourUpdate() {
         $(".time-block")[i].classList.remove("present")
         $(".time-block")[i].classList.add("future")
     }
-   }
+
+  }
 }
 
 hourUpdate();
 
 
+//  let setInterval = setInterval(hourUpdate, 10000);
 
+ $("#currentDay").text(moment().format("dddd Do MMMM"))
+    
+    //Add to local storage when the save button is clicked in that timeblock.
 
-
-
-
-
-
-
-
-
-//Add to local storage when the save button is clicked in that timeblock.
-
-// $("#hour-9 .description").val(localStorage.getItem("hour-9"))
-// $("#hour-10 .description").val(localStorage.getItem("hour-9"))
-// $("#hour-11 .description").val(localStorage.getItem("hour-9"))
-// $("#hour-12 .description").val(localStorage.getItem("hour-9"))
-// $("#hour-13 .description").val(localStorage.getItem("hour-9"))
-// $("#hour-14 .description").val(localStorage.getItem("hour-9"))
-// $("#hour-15 .description").val(localStorage.getItem("hour-9"))
-// $("#hour-16 .description").val(localStorage.getItem("hour-9"))
-// $("#hour-17 .description").val(localStorage.getItem("hour-9"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var saveButtonE1 = $("#save-btn");
-// console.log(saveButtonE1);
-
-
-
-// var saveButtonE1 = document.getElementById("save-btn");
-// console.log(saveButtonE1);
-
-// saveButtonE1.on('click', function () {
-//     alert("hi");
-// })
-
-
-// var saveButtonE1 = document.querySelector("#save-btn");
-// console.log(saveButtonE1);
-
-
-// function saveButtonE1() {
-//     alert("hi");
-//     console.log(saveButtonE1);
-// }
+    $("#hour-9 .description").val(localStorage.getItem("hour-9"))
+    $("#hour-10 .description").val(localStorage.getItem("hour-10"))
+    $("#hour-11 .description").val(localStorage.getItem("hour-11"))
+    $("#hour-12 .description").val(localStorage.getItem("hour-12"))
+    $("#hour-13 .description").val(localStorage.getItem("hour-13"))
+    $("#hour-14 .description").val(localStorage.getItem("hour-14"))
+    $("#hour-15 .description").val(localStorage.getItem("hour-15"))
+    $("#hour-16 .description").val(localStorage.getItem("hour-16"))
+    $("#hour-17 .description").val(localStorage.getItem("hour-17"))
+    
+    
+   
+    
