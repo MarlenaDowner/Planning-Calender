@@ -8,15 +8,10 @@ My motivation for this project was to build a simple calendar application that a
 ## Apps functionality:
 
 * Display's the current day and time at the top of the calender when a user opens the planner.
- 
 * Present timeblocks for standard business hours when the user scrolls down.
- 
 * Color-code each timeblock based on past, present, and future when the timeblock is viewed.
- 
 * Allow a user to enter an event when they click a timeblock
-
 * Save's the event in local storage when the save button is clicked in that timeblock.
-
 * Persist events between refreshes of a page
 
 ## Project Screenshot
